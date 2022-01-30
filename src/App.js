@@ -1,5 +1,11 @@
 import './App.css';
 import Customer from './components/Customer'
+import Paper from '@mui/material/Paper';
+import Table from '@mui/material/Table';
+import TableHead from '@mui/material/TableHead';
+import TableBody from '@mui/material/TableBody';
+import TableRow from '@mui/material/TableRow';
+import TableCell from '@mui/material/TableCell';
 
 const customers = [{
     'id': '1',
@@ -25,27 +31,33 @@ const customers = [{
     'gender': 'Male',
     'job': 'Baby'
   },
-
 ]
 
-function App() {
+function App(props) {
   return ( 
-    <div>
-      {
+    <Paper>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>ID</TableCell>
+            <TableCell>Image</TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell>Date of Birth</TableCell>
+            <TableCell>Gender</TableCell>
+            <TableCell>Occupation</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+        {
         customers.map(c => {
           return (
-            <Customer
-            id={c.id}
-            src={c.src}
-            name={c.name}
-            birthday={c.birthday}
-            gender={c.gender}
-            job={c.job}
-            / >
+            <Customer id={c.id} src={c.src} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/ >
           )
         })
       }
-    </div>
+        </TableBody>
+      </Table>
+    </Paper>
   );
 }
 

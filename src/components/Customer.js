@@ -1,30 +1,18 @@
 import React from 'react';
+import TableRow from '@mui/material/TableRow';
+import TableCell from '@mui/material/TableCell';
 
 function Customer(props){
     return (
-        <div>
-            <CustomerProfile id={props.id} src={props.src} name={props.name}/ >
-            <CustomerInfo birthday={props.birthday} gender={props.gender} job={props.job}/ >
-        </div>
+        <TableRow>
+            <TableCell>{props.id}</TableCell>
+            <TableCell><img src={props.src} alt="profile"/></TableCell>
+            <TableCell>{props.name}</TableCell>
+            <TableCell>{props.birthday}</TableCell>
+            <TableCell>{props.gender}</TableCell>
+            <TableCell>{props.job}</TableCell>
+        </TableRow>
     )
 }
 
-function CustomerProfile(props){
-    return(
-        <div>
-            <img src={props.src} alt="profile image"/>
-            <p>{props.name} [{props.id}]</p>
-        </div>
-    )
-}
-
-function CustomerInfo(props){
-    return(
-        <div>
-            <p>{props.birthday}</p>
-            <p>{props.gender}</p>
-            <p>{props.job}</p>
-        </div>
-    )
-}
 export default Customer;
