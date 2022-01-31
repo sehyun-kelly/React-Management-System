@@ -43,7 +43,6 @@ class App extends Component {
   }
 
   render(){
-    const { classes } = this.props;
     return ( 
       <div>
       <Paper>
@@ -56,6 +55,7 @@ class App extends Component {
               <TableCell>Date of Birth</TableCell>
               <TableCell>Gender</TableCell>
               <TableCell>Occupation</TableCell>
+              <TableCell>Settings</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -63,7 +63,7 @@ class App extends Component {
           this.state.customers ? 
           this.state.customers.map(c => {
             return (
-              <Customer id={c.id} src={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/ >
+              <Customer stateRefresh={this.stateRefresh} key={c.id} id={c.id} src={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/ >
             )
           }) : ""
           }
