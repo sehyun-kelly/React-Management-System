@@ -12,8 +12,22 @@ import TableCell from '@mui/material/TableCell';
 
 
 class App extends Component {
-  state = {
-    customers: "",
+  constructor(props) {
+    super(props);
+    this.state = {
+      custoemrs: '',
+      completed: 0
+    }
+  }
+
+  stateRefresh = () => {
+    this.setState({
+      customers: '',
+      completed: 0
+    });
+    this.callApi()
+    .then(res => this.setState({customers: res}))
+    .catch(err => console.log(err));
   }
 
   componentDidMount(){    
@@ -49,14 +63,14 @@ class App extends Component {
           this.state.customers ? 
           this.state.customers.map(c => {
             return (
-              <Customer id={c.id} src={c.image} name={c.name} birthday={c.bitrhday} gender={c.gender} job={c.job}/ >
+              <Customer id={c.id} src={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/ >
             )
           }) : ""
           }
           </TableBody>
         </Table>
       </Paper>
-      <CusomterAdd/>
+      <CusomterAdd stateRefresh={this.stateRefresh}/>
       </div>
     );
   }
