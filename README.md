@@ -1,5 +1,5 @@
 <!-- ABOUT THE PROJECT -->
-#Customer Management System | Personal Project
+# Customer Management System | Personal Project
 ## About The Project
 
 This is a single page customer management system where you can add and delete customers.
@@ -25,7 +25,7 @@ Project Link: [https://github.com/sehyun-kelly/React-Management-System](https://
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* [Customer Management System Tutorial using React JS and Node.js](https://www.youtube.com/c/dongbinna)
+* [Customer Management System Tutorial using React JS and Node.js](https://www.youtube.com/watch?v=_yEH9mczm3g&list=PLRx0vPvlEmdD1pSqKZiTihy5rplxecNpz&ab_channel=%EB%8F%99%EB%B9%88%EB%82%98)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
