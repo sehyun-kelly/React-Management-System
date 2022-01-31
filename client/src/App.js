@@ -2,6 +2,7 @@ import './App.css';
 import * as React from 'react';
 import { Component } from 'react';
 import Customer from './components/Customer'
+import CusomterAdd from './components/CustomerAdd'
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableHead from '@mui/material/TableHead';
@@ -30,6 +31,7 @@ class App extends Component {
   render(){
     const { classes } = this.props;
     return ( 
+      <div>
       <Paper>
         <Table>
           <TableHead>
@@ -54,6 +56,8 @@ class App extends Component {
           </TableBody>
         </Table>
       </Paper>
+      <CusomterAdd/>
+      </div>
     );
   }
     }
