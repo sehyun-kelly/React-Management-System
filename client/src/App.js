@@ -1,5 +1,6 @@
 import './App.css';
-import React, { Component } from 'react';
+import * as React from 'react';
+import { Component } from 'react';
 import Customer from './components/Customer'
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
@@ -11,10 +12,10 @@ import TableCell from '@mui/material/TableCell';
 
 class App extends Component {
   state = {
-    customers: ""
+    customers: "",
   }
 
-  componentDidMount(){
+  componentDidMount(){    
     this.callApi()
       .then(res => this.setState({customers: res}))
       .catch(err => console.log(err));
@@ -27,6 +28,7 @@ class App extends Component {
   }
 
   render(){
+    const { classes } = this.props;
     return ( 
       <Paper>
         <Table>
@@ -45,10 +47,10 @@ class App extends Component {
           this.state.customers ? 
           this.state.customers.map(c => {
             return (
-              <Customer id={c.id} src={c.src} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/ >
+              <Customer id={c.id} src={c.image} name={c.name} birthday={c.bitrhday} gender={c.gender} job={c.job}/ >
             )
-          }) : ""}
-        
+          }) : ""
+          }
           </TableBody>
         </Table>
       </Paper>
