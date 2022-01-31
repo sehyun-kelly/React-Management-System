@@ -28,6 +28,18 @@
   color: #61dafb;
 }
 
+#addbutton{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+#paper{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +48,4 @@
     transform: rotate(360deg);
   }
 }
+
